@@ -45,6 +45,31 @@ jobs:
           done < <(find . -name '*.php' -not -path './vendor/*')
           exit $failed
 
+      # The plugin directory rejects a submission whose main file points both
+      # URIs at the same address, so the upload fails after the work is done.
+      - name: Check the plugin header
+        run: |
+          set -euo pipefail
+          plugin_uri=$(sed -n 's/^ \* Plugin URI: *//p' plotbird-analytics.php | tr -d '\r')
+          author_uri=$(sed -n 's/^ \* Author URI: *//p' plotbird-analytics.php | tr -d '\r')
+          text_domain=$(sed -n 's/^ \* Text Domain: *//p' plotbird-analytics.php | tr -d '\r')
+
+          echo "plugin URI : ${plugin_uri}"
+          echo "author URI : ${author_uri}"
+          echo "textdomain : ${text_domain}"
+
+          if [ -n "${plugin_uri}" ] && [ "${plugin_uri}" = "${author_uri}" ]; then
+            echo "::error::the plugin URI and the author URI are the same address"
+            exit 1
+          fi
+
+          if [ "${text_domain}" != "plotbird-analytics" ]; then
+            echo "::error::the text domain must match the directory slug"
+            exit 1
+          fi
+
+          echo "header ok"
+
       - name: Fail on a stray debugging call
         run: |
           set -o pipefail
