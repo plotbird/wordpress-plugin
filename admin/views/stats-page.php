@@ -169,6 +169,7 @@ $plotbird_cards = [
         </div>
     <?php else : ?>
 
+        <?php // phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped -- charts and lists are markup built and escaped inside PlotBird_Chart. ?>
         <div class="plotbird-cards">
             <?php foreach ($plotbird_cards as $plotbird_card) : ?>
                 <div class="plotbird-card plotbird-stat">
@@ -313,6 +314,7 @@ $plotbird_cards = [
             </div>
         </div>
 
+        <?php // phpcs:enable WordPress.Security.EscapeOutput.OutputNotEscaped ?>
         <p class="description plotbird-footnote">
             <?php
             printf(

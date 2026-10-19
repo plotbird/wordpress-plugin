@@ -1,6 +1,11 @@
 <?php
 /**
- * Prints the tracking code in the page head.
+ * Registers the tracking script with WordPress.
+ *
+ * The script lives on the PlotBird installation, which may be on another domain,
+ * so WordPress cannot bundle it. Enqueuing it is still the right way to do this:
+ * the handle, the attributes and the ordering all stay in the plugin's hands, and
+ * the tag is printed by WordPress rather than pasted into the head.
  *
  * @package PlotBird_Analytics
  */
@@ -8,15 +13,19 @@
 defined('ABSPATH') || exit;
 
 /**
- * Adds one script tag and nothing else.
+ * Registers, enqueues and decorates the tracking script.
  */
 final class PlotBird_Tracker {
 
+    /** Handle of the script. */
+    public const HANDLE = 'plotbird-analytics';
+
     /**
-     * Attach the output to the head.
+     * Attach to the front end.
      */
     public static function register(): void {
-        add_action('wp_head', [self::class, 'print_tag'], 20);
+        add_action('wp_enqueue_scripts', [self::class, 'enqueue']);
+        add_filter('script_loader_tag', [self::class, 'add_attributes'], 10, 3);
     }
 
     /**
@@ -39,17 +48,41 @@ final class PlotBird_Tracker {
     }
 
     /**
-     * Output the tag.
+     * Queue the script.
      */
-    public static function print_tag(): void {
+    public static function enqueue(): void {
         if (!self::should_print()) {
             return;
         }
 
-        printf(
-            '<script async defer src="%1$s" data-website-id="%2$s"></script>' . "\n",
-            esc_url(PlotBird_Settings::tracker_url()),
+        wp_enqueue_script(
+            self::HANDLE,
+            PlotBird_Settings::tracker_url(),
+            [],
+            PLOTBIRD_ANALYTICS_VERSION,
+            false
+        );
+    }
+
+    /**
+     * Add the tracking attributes to the tag WordPress prints.
+     *
+     * @param string $tag    The script tag.
+     * @param string $handle Script handle.
+     * @param string $src    Script source.
+     */
+    public static function add_attributes(string $tag, string $handle, string $src): string {
+        if ($handle !== self::HANDLE) {
+            return $tag;
+        }
+
+        $attributes = sprintf(
+            ' async defer data-website-id="%s"',
             esc_attr(PlotBird_Settings::website_id())
         );
+
+        // Injected at the src attribute, so the plugin never builds a script tag
+        // by hand: WordPress owns the tag, this only decorates it.
+        return str_replace(' src=', $attributes . ' src=', $tag);
     }
 }

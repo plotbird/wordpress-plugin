@@ -12,15 +12,15 @@ msgstr ""
 msgid "\"Site language\" follows the language of WordPress, so usually there is nothing to choose here. Pick one only if these screens should be in another language than the rest of the admin."
 msgstr "«Язык сайта» повторяет язык WordPress, поэтому обычно выбирать здесь нечего. Укажите другой, только если эти экраны должны быть на ином языке, чем остальная админка."
 
-#: includes/class-plotbird-stats.php:208
+#: includes/class-plotbird-stats.php:232
 msgid "%1$d min %2$d s"
 msgstr "%1$d мин %2$d с"
 
-#: includes/class-plotbird-stats.php:203
+#: includes/class-plotbird-stats.php:227
 msgid "%d min"
 msgstr "%d мин"
 
-#: includes/class-plotbird-stats.php:192
+#: includes/class-plotbird-stats.php:216
 msgid "%d s"
 msgstr "%d с"
 
@@ -52,7 +52,7 @@ msgstr "Среднее время"
 msgid "Bounce rate"
 msgstr "Отказы"
 
-#: admin/views/stats-page.php:286
+#: admin/views/stats-page.php:287
 msgid "Browsers"
 msgstr "Браузеры"
 
@@ -88,7 +88,7 @@ msgstr "Не удалось открыть главную страницу: %s"
 msgid "Could not reach the address: %s"
 msgstr "Не удалось обратиться по адресу: %s"
 
-#: admin/views/stats-page.php:246
+#: admin/views/stats-page.php:247
 msgid "Countries"
 msgstr "Страны"
 
@@ -100,15 +100,15 @@ msgstr "Создайте ссылку. Оставьте дату пустой, �
 msgid "Create a new link in PlotBird"
 msgstr "Создать новую ссылку в PlotBird"
 
-#: admin/views/stats-page.php:275
+#: admin/views/stats-page.php:276
 msgid "Desktop"
 msgstr "Компьютер"
 
-#: admin/views/stats-page.php:269
+#: admin/views/stats-page.php:270
 msgid "Devices"
 msgstr "Устройства"
 
-#: admin/views/stats-page.php:238
+#: admin/views/stats-page.php:239
 msgid "Direct / none"
 msgstr "Прямой заход"
 
@@ -136,7 +136,7 @@ msgstr "Сначала укажите полный адрес, например 
 msgid "Finish the two steps above first."
 msgstr "Сначала выполните два шага выше."
 
-#: admin/views/stats-page.php:296
+#: admin/views/stats-page.php:297
 msgid "Goals"
 msgstr "Цели"
 
@@ -164,11 +164,11 @@ msgstr "Язык этих экранов"
 msgid "Loads your home page and looks for the tracking code in it."
 msgstr "Открывает главную страницу и ищет в ней код счётчика."
 
-#: admin/views/stats-page.php:276
+#: admin/views/stats-page.php:277
 msgid "Mobile"
 msgstr "Телефон"
 
-#: admin/views/stats-page.php:299
+#: admin/views/stats-page.php:300
 msgid "No goals yet. A goal counts visitors who reached a page or triggered an event."
 msgstr "Целей пока нет. Цель считает посетителей, дошедших до страницы или вызвавших событие."
 
@@ -200,7 +200,7 @@ msgstr "Открыть полный дашборд"
 msgid "Open the setup"
 msgstr "Открыть настройку"
 
-#: admin/views/stats-page.php:203
+#: admin/views/stats-page.php:204
 msgid "Pageviews"
 msgstr "Просмотры"
 
@@ -244,7 +244,7 @@ msgstr "PlotBird — аналитика для собственного серв
 msgid "Point the plugin at a PlotBird installation"
 msgstr "Укажите плагину установку PlotBird"
 
-#: admin/views/stats-page.php:320
+#: admin/views/stats-page.php:322
 msgid "Read through a share link, cached for a minute. Last request: %s."
 msgstr "Данные читаются по публичной ссылке и кешируются на минуту. Последний запрос: %s."
 
@@ -284,7 +284,7 @@ msgstr "Язык сайта"
 msgid "Something answers there, but it is not PlotBird: the tracker file is missing its signature."
 msgstr "По адресу что-то отвечает, но это не PlotBird: в файле счётчика нет подписи."
 
-#: admin/views/stats-page.php:233
+#: admin/views/stats-page.php:234
 msgid "Sources"
 msgstr "Источники"
 
@@ -312,7 +312,7 @@ msgstr "Шаг 3. Статистика внутри WordPress"
 msgid "Step 4. Check it works"
 msgstr "Шаг 4. Проверьте, что работает"
 
-#: admin/views/stats-page.php:277
+#: admin/views/stats-page.php:278
 msgid "Tablet"
 msgstr "Планшет"
 
@@ -368,11 +368,11 @@ msgstr "Сделать:"
 msgid "Today"
 msgstr "Сегодня"
 
-#: admin/views/stats-page.php:221
+#: admin/views/stats-page.php:222
 msgid "Top pages"
 msgstr "Популярные страницы"
 
-#: admin/views/stats-page.php:197
+#: admin/views/stats-page.php:198
 msgid "Traffic"
 msgstr "Трафик"
 
@@ -384,7 +384,7 @@ msgstr "Трафик по дням"
 msgid "Unpack it on your hosting into a folder of its own, for example /plotbird/. Any folder works as long as the address is reachable from a browser."
 msgstr "Распакуйте его на хостинге в отдельную папку, например /plotbird/. Подойдёт любая, главное чтобы адрес открывался в браузере."
 
-#: admin/views/stats-page.php:209
+#: admin/views/stats-page.php:210
 msgid "Visitors"
 msgstr "Посетители"
 
@@ -396,7 +396,7 @@ msgstr "Идентификатор сайта"
 msgid "Where do I get one?"
 msgstr "Где её взять?"
 
-#: includes/class-plotbird-admin.php:207
+#: includes/class-plotbird-admin.php:209
 msgid "You are not allowed to change these settings."
 msgstr "У вас нет прав менять эти настройки."
 

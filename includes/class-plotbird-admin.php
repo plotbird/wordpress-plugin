@@ -183,11 +183,13 @@ final class PlotBird_Admin {
             return;
         }
 
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only view filter, nothing is changed.
         $preset = isset($_GET['preset']) ? sanitize_key(wp_unslash((string) $_GET['preset'])) : 'last7';
         if (!in_array($preset, PlotBird_Stats::PRESETS, true)) {
             $preset = 'last7';
         }
 
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- cache flush only.
         $force = isset($_GET['plotbird_refresh']);
         if ($force) {
             PlotBird_Stats::flush();

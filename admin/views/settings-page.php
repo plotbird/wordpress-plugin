@@ -50,7 +50,7 @@ $plotbird_steps = [
     <ol class="plotbird-steps">
         <?php foreach ($plotbird_steps as $plotbird_index => $plotbird_step) : ?>
             <li class="<?php echo $plotbird_step['done'] ? 'is-done' : 'is-pending'; ?>">
-                <span class="plotbird-step-mark" aria-hidden="true"><?php echo $plotbird_step['done'] ? '✓' : (string) ($plotbird_index + 1); ?></span>
+                <span class="plotbird-step-mark" aria-hidden="true"><?php echo esc_html($plotbird_step['done'] ? '✓' : (string) ($plotbird_index + 1)); ?></span>
                 <span class="screen-reader-text">
                     <?php
                     echo $plotbird_step['done']

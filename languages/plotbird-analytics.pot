@@ -13,15 +13,15 @@ msgstr ""
 msgid "\"Site language\" follows the language of WordPress, so usually there is nothing to choose here. Pick one only if these screens should be in another language than the rest of the admin."
 msgstr ""
 
-#: includes/class-plotbird-stats.php:208
+#: includes/class-plotbird-stats.php:232
 msgid "%1$d min %2$d s"
 msgstr ""
 
-#: includes/class-plotbird-stats.php:203
+#: includes/class-plotbird-stats.php:227
 msgid "%d min"
 msgstr ""
 
-#: includes/class-plotbird-stats.php:192
+#: includes/class-plotbird-stats.php:216
 msgid "%d s"
 msgstr ""
 
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Bounce rate"
 msgstr ""
 
-#: admin/views/stats-page.php:286
+#: admin/views/stats-page.php:287
 msgid "Browsers"
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Could not reach the address: %s"
 msgstr ""
 
-#: admin/views/stats-page.php:246
+#: admin/views/stats-page.php:247
 msgid "Countries"
 msgstr ""
 
@@ -101,15 +101,15 @@ msgstr ""
 msgid "Create a new link in PlotBird"
 msgstr ""
 
-#: admin/views/stats-page.php:275
+#: admin/views/stats-page.php:276
 msgid "Desktop"
 msgstr ""
 
-#: admin/views/stats-page.php:269
+#: admin/views/stats-page.php:270
 msgid "Devices"
 msgstr ""
 
-#: admin/views/stats-page.php:238
+#: admin/views/stats-page.php:239
 msgid "Direct / none"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Finish the two steps above first."
 msgstr ""
 
-#: admin/views/stats-page.php:296
+#: admin/views/stats-page.php:297
 msgid "Goals"
 msgstr ""
 
@@ -165,11 +165,11 @@ msgstr ""
 msgid "Loads your home page and looks for the tracking code in it."
 msgstr ""
 
-#: admin/views/stats-page.php:276
+#: admin/views/stats-page.php:277
 msgid "Mobile"
 msgstr ""
 
-#: admin/views/stats-page.php:299
+#: admin/views/stats-page.php:300
 msgid "No goals yet. A goal counts visitors who reached a page or triggered an event."
 msgstr ""
 
@@ -201,7 +201,7 @@ msgstr ""
 msgid "Open the setup"
 msgstr ""
 
-#: admin/views/stats-page.php:203
+#: admin/views/stats-page.php:204
 msgid "Pageviews"
 msgstr ""
 
@@ -245,7 +245,7 @@ msgstr ""
 msgid "Point the plugin at a PlotBird installation"
 msgstr ""
 
-#: admin/views/stats-page.php:320
+#: admin/views/stats-page.php:322
 msgid "Read through a share link, cached for a minute. Last request: %s."
 msgstr ""
 
@@ -285,7 +285,7 @@ msgstr ""
 msgid "Something answers there, but it is not PlotBird: the tracker file is missing its signature."
 msgstr ""
 
-#: admin/views/stats-page.php:233
+#: admin/views/stats-page.php:234
 msgid "Sources"
 msgstr ""
 
@@ -313,7 +313,7 @@ msgstr ""
 msgid "Step 4. Check it works"
 msgstr ""
 
-#: admin/views/stats-page.php:277
+#: admin/views/stats-page.php:278
 msgid "Tablet"
 msgstr ""
 
@@ -369,11 +369,11 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
-#: admin/views/stats-page.php:221
+#: admin/views/stats-page.php:222
 msgid "Top pages"
 msgstr ""
 
-#: admin/views/stats-page.php:197
+#: admin/views/stats-page.php:198
 msgid "Traffic"
 msgstr ""
 
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Unpack it on your hosting into a folder of its own, for example /plotbird/. Any folder works as long as the address is reachable from a browser."
 msgstr ""
 
-#: admin/views/stats-page.php:209
+#: admin/views/stats-page.php:210
 msgid "Visitors"
 msgstr ""
 
@@ -397,7 +397,7 @@ msgstr ""
 msgid "Where do I get one?"
 msgstr ""
 
-#: includes/class-plotbird-admin.php:207
+#: includes/class-plotbird-admin.php:209
 msgid "You are not allowed to change these settings."
 msgstr ""
 

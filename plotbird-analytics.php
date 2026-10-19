@@ -3,7 +3,7 @@
  * Plugin Name:       PlotBird Analytics
  * Plugin URI:        https://plotbird.github.io/
  * Description:       Adds the PlotBird tracking code to your site. PlotBird is self-hosted, cookie-free web analytics that runs on ordinary PHP and MySQL hosting.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            PlotBird
@@ -18,7 +18,7 @@
 
 defined('ABSPATH') || exit;
 
-define('PLOTBIRD_ANALYTICS_VERSION', '1.0.0');
+define('PLOTBIRD_ANALYTICS_VERSION', '1.0.1');
 define('PLOTBIRD_ANALYTICS_FILE', __FILE__);
 define('PLOTBIRD_ANALYTICS_DIR', plugin_dir_path(__FILE__));
 define('PLOTBIRD_ANALYTICS_URL', plugin_dir_url(__FILE__));
@@ -34,25 +34,27 @@ require_once PLOTBIRD_ANALYTICS_DIR . 'includes/class-plotbird-admin.php';
  * Load the translations, either for the site's language or for the one chosen
  * on the setup screen.
  *
- * Following the site is the default and needs nothing here: WordPress asks for
- * plotbird-analytics-<locale>.mo by itself, so a Russian site gets Russian
- * screens without anyone opening a setting.
- *
- * When a language is chosen explicitly the catalogue has to be loaded by hand.
- * WordPress 6.7 loads translations just in time using the site locale, which
- * ignores the plugin_locale filter, so an override has to name the file.
+ * Following the site is the default and needs no call at all: WordPress loads
+ * languages/plotbird-analytics-<locale>.mo by itself, and on WordPress.org the
+ * language packs do the same. When a language is chosen explicitly the catalogue
+ * has to be loaded by hand, because WordPress 6.7 loads translations just in time
+ * using the site locale and ignores the plugin_locale filter.
  */
 add_action('init', static function (): void {
     $chosen = (string) PlotBird_Settings::get('language');
-    $file   = PLOTBIRD_ANALYTICS_DIR . 'languages/plotbird-analytics-' . $chosen . '.mo';
 
-    if ($chosen !== 'site' && is_file($file)) {
-        unload_textdomain('plotbird-analytics');
-        load_textdomain('plotbird-analytics', $file);
+    if ($chosen === 'site' || $chosen === '') {
         return;
     }
 
-    load_plugin_textdomain('plotbird-analytics', false, dirname(plugin_basename(PLOTBIRD_ANALYTICS_FILE)) . '/languages');
+    $file = PLOTBIRD_ANALYTICS_DIR . 'languages/plotbird-analytics-' . $chosen . '.mo';
+
+    if (!is_file($file)) {
+        return;
+    }
+
+    unload_textdomain('plotbird-analytics');
+    load_textdomain('plotbird-analytics', $file);
 }, 1);
 
 /**

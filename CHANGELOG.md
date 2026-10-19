@@ -4,6 +4,24 @@ All notable changes to the WordPress plugin are recorded here. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the
 project uses [semantic versioning](https://semver.org/).
 
+## [1.0.1] - 2026-10-19
+
+### Changed
+
+* The tracking script is registered with `wp_enqueue_script()` and decorated
+  through `script_loader_tag`, so WordPress owns the tag instead of the plugin
+  printing one.
+* The tracker URL carries a plugin version, so an update is fetched instead of
+  being served from a browser cache.
+
+### Fixed
+
+* Plugin Check reports no errors and no warnings. The generated chart and list
+  markup is marked as such, a non-escaping read of the step list is escaped, and
+  the readme declares `Tested up to: 7.1` instead of a patch version.
+* `load_plugin_textdomain()` is gone: WordPress loads the catalogue by itself, and
+  the call is discouraged for plugins hosted on WordPress.org.
+
 ## [1.0.0] - 2026-10-19
 
 First public release.
@@ -26,4 +44,5 @@ First public release.
   forced to either from the setup screen.
 - Bird icon in the admin menu, drawn from the project's own mark.
 
+[1.0.1]: https://github.com/plotbird/wordpress-plugin/releases/tag/v1.0.1
 [1.0.0]: https://github.com/plotbird/wordpress-plugin/releases/tag/v1.0.0
