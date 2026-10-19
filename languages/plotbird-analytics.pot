@@ -1,0 +1,411 @@
+# Translation template for PlotBird Analytics.
+# This file is distributed under the same licence as the plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: PlotBird Analytics 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/plotbird/analytics/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: plotbird-analytics\n"
+
+#: admin/views/settings-page.php:160
+msgid "\"Site language\" follows the language of WordPress, so usually there is nothing to choose here. Pick one only if these screens should be in another language than the rest of the admin."
+msgstr ""
+
+#: includes/class-plotbird-stats.php:208
+msgid "%1$d min %2$d s"
+msgstr ""
+
+#: includes/class-plotbird-stats.php:203
+msgid "%d min"
+msgstr ""
+
+#: includes/class-plotbird-stats.php:192
+msgid "%d s"
+msgstr ""
+
+#: admin/views/stats-page.php:119
+msgid "%s online now"
+msgstr ""
+
+#: admin/views/stats-page.php:28
+msgid "30 days"
+msgstr ""
+
+#: admin/views/stats-page.php:27
+msgid "7 days"
+msgstr ""
+
+#: includes/class-plotbird-settings.php:177
+msgid "A website id looks like 00000000-0000-0000-0000-000000000000."
+msgstr ""
+
+#: admin/views/settings-page.php:29
+msgid "Add a share link to see statistics inside WordPress"
+msgstr ""
+
+#: admin/views/stats-page.php:87
+msgid "Average time"
+msgstr ""
+
+#: admin/views/stats-page.php:94
+msgid "Bounce rate"
+msgstr ""
+
+#: admin/views/stats-page.php:286
+msgid "Browsers"
+msgstr ""
+
+#: admin/views/settings-page.php:33
+msgid "Check that visits arrive"
+msgstr ""
+
+#: admin/views/settings-page.php:174
+msgid "Check the address"
+msgstr ""
+
+#: admin/views/settings-page.php:185
+msgid "Check the code on my front page"
+msgstr ""
+
+#: admin/views/settings-page.php:86
+msgid "Come back here and paste the address below."
+msgstr ""
+
+#: admin/views/settings-page.php:25
+msgid "Connect your website"
+msgstr ""
+
+#: admin/views/settings-page.php:134
+msgid "Copy the address and paste it below."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:113
+msgid "Could not load your front page: %s"
+msgstr ""
+
+#: includes/class-plotbird-checker.php:50
+msgid "Could not reach the address: %s"
+msgstr ""
+
+#: admin/views/stats-page.php:246
+msgid "Countries"
+msgstr ""
+
+#: admin/views/settings-page.php:133
+msgid "Create a link. Leave the date empty for one that never expires."
+msgstr ""
+
+#: admin/views/stats-page.php:165
+msgid "Create a new link in PlotBird"
+msgstr ""
+
+#: admin/views/stats-page.php:275
+msgid "Desktop"
+msgstr ""
+
+#: admin/views/stats-page.php:269
+msgid "Devices"
+msgstr ""
+
+#: admin/views/stats-page.php:238
+msgid "Direct / none"
+msgstr ""
+
+#: admin/views/settings-page.php:117
+msgid "Do not track logged-in administrators"
+msgstr ""
+
+#: admin/views/settings-page.php:57
+msgid "Done:"
+msgstr ""
+
+#: admin/views/settings-page.php:78
+msgid "Download the archive from %s."
+msgstr ""
+
+#: includes/class-plotbird-stats.php:155
+msgid "Enter the PlotBird address first."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:35
+msgid "Enter the full address first, for example https://example.com/plotbird."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:99
+msgid "Finish the two steps above first."
+msgstr ""
+
+#: admin/views/stats-page.php:296
+msgid "Goals"
+msgstr ""
+
+#: admin/views/settings-page.php:72
+msgid "I do not have PlotBird installed yet"
+msgstr ""
+
+#: admin/views/settings-page.php:103
+msgid "In PlotBird open Websites, then the code panel of the site you are connecting. The id is the long value in the snippet."
+msgstr ""
+
+#: admin/views/settings-page.php:89
+msgid "Keep PlotBird in a folder of its own rather than in the WordPress directory: the two applications then cannot interfere with each other."
+msgstr ""
+
+#: admin/views/settings-page.php:148
+msgid "Language"
+msgstr ""
+
+#: admin/views/settings-page.php:150
+msgid "Language of these screens"
+msgstr ""
+
+#: admin/views/settings-page.php:188
+msgid "Loads your home page and looks for the tracking code in it."
+msgstr ""
+
+#: admin/views/stats-page.php:276
+msgid "Mobile"
+msgstr ""
+
+#: admin/views/stats-page.php:299
+msgid "No goals yet. A goal counts visitors who reached a page or triggered an event."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:62
+msgid "Nothing answers at that address. Check that the PlotBird folder was uploaded where the address points."
+msgstr ""
+
+#: includes/class-plotbird-chart.php:186
+msgid "Nothing here yet for this period."
+msgstr ""
+
+#: admin/views/settings-page.php:131
+msgid "Open PlotBird and go to Websites."
+msgstr ""
+
+#: admin/views/settings-page.php:85
+msgid "Open that address in a browser and finish the seven-step installer. It creates its own tables and asks for a database, an administrator account and your first website."
+msgstr ""
+
+#: admin/views/settings-page.php:132
+msgid "Open the code panel of your website and find Links and goals."
+msgstr ""
+
+#: admin/views/stats-page.php:140
+msgid "Open the full dashboard"
+msgstr ""
+
+#: admin/views/stats-page.php:161
+msgid "Open the setup"
+msgstr ""
+
+#: admin/views/stats-page.php:203
+msgid "Pageviews"
+msgstr ""
+
+#: admin/views/stats-page.php:129
+msgid "Period"
+msgstr ""
+
+#: includes/class-plotbird-admin.php:71
+msgid "PlotBird"
+msgstr ""
+
+#: admin/views/settings-page.php:38
+msgid "PlotBird Analytics"
+msgstr ""
+
+#: admin/views/settings-page.php:94
+msgid "PlotBird address"
+msgstr ""
+
+#: includes/class-plotbird-stats.php:169
+msgid "PlotBird answered with an error."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:86
+msgid "PlotBird answered. Now paste the website id from its dashboard."
+msgstr ""
+
+#: includes/class-plotbird-stats.php:167
+msgid "PlotBird could not be reached from this server."
+msgstr ""
+
+#: includes/class-plotbird-stats.php:159
+msgid "PlotBird does not accept this link: it was revoked, it expired, or it points at another installation."
+msgstr ""
+
+#: admin/views/settings-page.php:41
+msgid "PlotBird is self-hosted analytics: it needs an installation you control, on this hosting account or on another server. This plugin only adds the tracking code and never sends your data anywhere else."
+msgstr ""
+
+#: admin/views/settings-page.php:21
+msgid "Point the plugin at a PlotBird installation"
+msgstr ""
+
+#: admin/views/stats-page.php:320
+msgid "Read through a share link, cached for a minute. Last request: %s."
+msgstr ""
+
+#: admin/views/settings-page.php:120
+msgid "Recommended: your own visits would otherwise land in the statistics."
+msgstr ""
+
+#: admin/views/stats-page.php:145
+msgid "Refresh"
+msgstr ""
+
+#: admin/views/settings-page.php:163
+msgid "Save and continue"
+msgstr ""
+
+#: admin/views/settings-page.php:163
+msgid "Save changes"
+msgstr ""
+
+#: admin/views/stats-page.php:80
+msgid "Sessions"
+msgstr ""
+
+#: includes/class-plotbird-admin.php:130
+msgid "Setup"
+msgstr ""
+
+#: admin/views/settings-page.php:138
+msgid "Share link"
+msgstr ""
+
+#: includes/class-plotbird-settings.php:59
+msgid "Site language"
+msgstr ""
+
+#: includes/class-plotbird-checker.php:80
+msgid "Something answers there, but it is not PlotBird: the tracker file is missing its signature."
+msgstr ""
+
+#: admin/views/stats-page.php:233
+msgid "Sources"
+msgstr ""
+
+#: includes/class-plotbird-admin.php:131
+msgid "Statistics"
+msgstr ""
+
+#: includes/class-plotbird-stats.php:157
+msgid "Statistics are read through a share link. Create one in PlotBird under Websites, then Links and goals."
+msgstr ""
+
+#: admin/views/settings-page.php:69
+msgid "Step 1. Where PlotBird lives"
+msgstr ""
+
+#: admin/views/settings-page.php:101
+msgid "Step 2. Website id"
+msgstr ""
+
+#: admin/views/settings-page.php:124
+msgid "Step 3. Statistics inside WordPress"
+msgstr ""
+
+#: admin/views/settings-page.php:167
+msgid "Step 4. Check it works"
+msgstr ""
+
+#: admin/views/stats-page.php:277
+msgid "Tablet"
+msgstr ""
+
+#: includes/class-plotbird-stats.php:163
+msgid "That address answered, but not with share statistics. Check that the link was copied from PlotBird."
+msgstr ""
+
+#: includes/class-plotbird-stats.php:165
+msgid "That address did not answer with statistics. A PlotBird installation answers /api/stats.php with JSON."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:71
+msgid "The address answered with HTTP %d. A PlotBird installation answers 200 for /assets/tracker.js."
+msgstr ""
+
+#: admin/views/settings-page.php:197
+msgid "The code is added to every page for website %s. Visits appear in your PlotBird dashboard, usually within a minute."
+msgstr ""
+
+#: includes/class-plotbird-settings.php:164
+msgid "The server address must start with http:// or https://."
+msgstr ""
+
+#: includes/class-plotbird-settings.php:195
+msgid "The share link looks like https://your-plotbird.example/share/abc123... Copy it from PlotBird under Websites, then Links and goals."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:124
+msgid "The tracking code is not in the page yet. If you use a caching plugin, clear its cache and check again."
+msgstr ""
+
+#: includes/class-plotbird-checker.php:130
+msgid "The tracking code is on the page. Open the site in another window and the first visit should appear in PlotBird within a minute."
+msgstr ""
+
+#: admin/views/settings-page.php:126
+msgid "The tracking code only sends visits. To read the numbers here, the plugin needs a share link: it is read-only, it can be revoked at any time, and it never gives access to change anything in PlotBird."
+msgstr ""
+
+#: includes/class-plotbird-stats.php:161
+msgid "This link belongs to a different website of the same installation. Create a link for the site whose id is above."
+msgstr ""
+
+#: admin/views/settings-page.php:145
+msgid "This link is the key to your numbers. If you revoke it in PlotBird, this page stops showing statistics until you add a new one."
+msgstr ""
+
+#: admin/views/settings-page.php:58
+msgid "To do:"
+msgstr ""
+
+#: admin/views/stats-page.php:26
+msgid "Today"
+msgstr ""
+
+#: admin/views/stats-page.php:221
+msgid "Top pages"
+msgstr ""
+
+#: admin/views/stats-page.php:197
+msgid "Traffic"
+msgstr ""
+
+#: includes/class-plotbird-chart.php:66
+msgid "Traffic over time"
+msgstr ""
+
+#: admin/views/settings-page.php:84
+msgid "Unpack it on your hosting into a folder of its own, for example /plotbird/. Any folder works as long as the address is reachable from a browser."
+msgstr ""
+
+#: admin/views/stats-page.php:209
+msgid "Visitors"
+msgstr ""
+
+#: admin/views/settings-page.php:106
+msgid "Website id"
+msgstr ""
+
+#: admin/views/settings-page.php:129
+msgid "Where do I get one?"
+msgstr ""
+
+#: includes/class-plotbird-admin.php:207
+msgid "You are not allowed to change these settings."
+msgstr ""
+
+#: admin/views/settings-page.php:80
+msgid "the latest release"
+msgstr ""
+
+#: admin/views/stats-page.php:108
+msgid "your website"
+msgstr ""
+

@@ -1,0 +1,11 @@
+# Files a build or a local test leaves behind.
+*.zip
+*.log
+node_modules/
+
+# Editor and system clutter.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

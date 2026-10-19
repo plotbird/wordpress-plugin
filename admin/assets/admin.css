@@ -1,0 +1,453 @@
+/* Settings and statistics screens for PlotBird Analytics. Every selector is
+   namespaced, so nothing here can leak into the rest of the admin. */
+
+.plotbird-wrap {
+    /* Full width on purpose: the dashboard is a wall of small blocks, and
+       capping the width leaves the right half of a wide screen empty. */
+    max-width: none;
+}
+
+.plotbird-lead {
+    max-width: 90ch;
+    font-size: 14px;
+    color: #50575e;
+}
+
+/* Steps ------------------------------------------------------------------- */
+
+.plotbird-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    margin: 18px 0 22px;
+    padding: 0;
+    list-style: none;
+}
+
+.plotbird-steps li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.plotbird-steps li.is-done {
+    color: #1d6f42;
+}
+
+.plotbird-steps li.is-pending {
+    color: #646970;
+}
+
+.plotbird-step-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f0f0f1;
+    color: #50575e;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.plotbird-steps li.is-done .plotbird-step-mark {
+    background: #d1f0dd;
+    color: #1d6f42;
+}
+
+/* Cards ------------------------------------------------------------------- */
+
+.plotbird-card {
+    margin: 0 0 20px;
+    padding: 20px 22px;
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+}
+
+.plotbird-card h2 {
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.plotbird-card p {
+    margin: 8px 0 14px;
+}
+
+.plotbird-help {
+    margin: 0 0 18px;
+    padding: 12px 14px;
+    background: #f6f7f7;
+    border-left: 3px solid #72aee6;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.plotbird-help summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.plotbird-help ol {
+    margin: 10px 0 0 18px;
+    padding: 0;
+}
+
+.plotbird-help li {
+    margin-bottom: 6px;
+}
+
+.plotbird-inline-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+}
+
+.plotbird-inline-form code {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.plotbird-done {
+    margin-top: 16px !important;
+    padding: 12px 14px;
+    background: #f0f8f2;
+    border-left: 3px solid #1d6f42;
+    border-radius: 4px;
+}
+
+/* Statistics page --------------------------------------------------------- */
+
+.plotbird-stats .plotbird-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.plotbird-stats .plotbird-header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.plotbird-stats .plotbird-lead {
+    margin: 6px 0 0;
+    font-size: 13px;
+}
+
+.plotbird-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Periods: real buttons, with the active one filled in. */
+.plotbird-periods {
+    display: inline-flex;
+    overflow: hidden;
+    border: 1px solid #c3c4c7;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.plotbird-periods a {
+    padding: 4px 12px;
+    border-right: 1px solid #c3c4c7;
+    color: #2271b1;
+    font-size: 13px;
+    line-height: 1.9;
+    text-decoration: none;
+}
+
+.plotbird-periods a:last-child {
+    border-right: 0;
+}
+
+.plotbird-periods a:hover {
+    background: #f0f0f1;
+    color: #135e96;
+}
+
+.plotbird-periods a.is-active {
+    background: #2271b1;
+    color: #fff;
+    font-weight: 600;
+}
+
+.plotbird-toolbar .button.button-primary {
+    /* The full dashboard is where people usually want to end up, so it leads. */
+    order: -1;
+}
+
+/* Metric cards ------------------------------------------------------------ */
+
+.plotbird-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.plotbird-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 16px 18px;
+}
+
+.plotbird-stat-label {
+    color: #646970;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.plotbird-stat-value {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.plotbird-stat strong {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+.plotbird-spark {
+    display: block;
+    width: 100%;
+    height: 32px;
+    margin-top: 6px;
+    opacity: 0.85;
+}
+
+.plotbird-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    padding: 2px 10px 2px 8px;
+    border-radius: 999px;
+    background: #edf7ef;
+    color: #1d6f42;
+    font-size: 12px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.plotbird-pill i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00a32a;
+    box-shadow: 0 0 0 3px rgba(0, 163, 42, 0.15);
+}
+
+.plotbird-delta {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.plotbird-delta.is-up {
+    color: #1d6f42;
+}
+
+.plotbird-delta.is-down {
+    color: #b32d2e;
+}
+
+.plotbird-delta.is-flat {
+    color: #646970;
+}
+
+/* Chart ------------------------------------------------------------------- */
+
+.plotbird-card-wide {
+    margin-bottom: 20px;
+}
+
+.plotbird-plot {
+    margin: 0;
+}
+
+.plotbird-plot svg {
+    display: block;
+    width: 100%;
+    height: 220px;
+}
+
+.plotbird-plot-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    color: #8c8f94;
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* The legend names each colour and repeats its total, so there is never a
+   question about which line is which. */
+.plotbird-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin: 0 0 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.plotbird-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #1d2327;
+}
+
+.plotbird-legend i {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.plotbird-legend b {
+    margin-left: 2px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Block rows -------------------------------------------------------------- */
+
+.plotbird-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.plotbird-columns .plotbird-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.plotbird-columns .plotbird-card > h2 {
+    margin-bottom: 12px;
+}
+
+/* Lists ------------------------------------------------------------------- */
+
+.plotbird-bars {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.plotbird-bars li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f6f7f7;
+    font-size: 13px;
+}
+
+.plotbird-bars li:last-child {
+    border-bottom: 0;
+}
+
+.plotbird-bars-label {
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.plotbird-bars-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--plotbird-share, 0%);
+    border-radius: 4px;
+    opacity: 0.12;
+}
+
+.plotbird-bars-text {
+    position: relative;
+    overflow-wrap: anywhere;
+}
+
+.plotbird-bars-text code {
+    background: none;
+    font-size: 12px;
+}
+
+.plotbird-bars-value {
+    flex: 0 0 auto;
+    color: #1d2327;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+
+.plotbird-flag {
+    display: inline-block;
+    margin-right: 6px;
+    border-radius: 2px;
+    vertical-align: -1px;
+}
+
+.plotbird-muted {
+    color: #8c8f94;
+}
+
+.plotbird-empty {
+    margin: 0;
+    color: #646970;
+    font-size: 13px;
+}
+
+.plotbird-footnote {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+    .plotbird-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 782px) {
+    .plotbird-columns {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .plotbird-stats .plotbird-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .plotbird-stat strong {
+        font-size: 22px;
+    }
+}

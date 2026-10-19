@@ -1,0 +1,7 @@
+# Consistent line endings: the plugin is read by PHP and by the WordPress.org
+# svn, both of which expect LF.
+* text=auto eol=lf
+
+# Binaries: git must not touch these.
+*.png binary
+*.mo binary
