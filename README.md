@@ -4,7 +4,7 @@ Adds the [PlotBird](https://github.com/plotbird/analytics) tracking code to a
 WordPress site, and shows the statistics inside the WordPress admin — no iframe,
 no third-party service, no cookies.
 
-![The statistics screen inside WordPress](screenshot-1.png)
+![The statistics screen inside WordPress](assets/screenshot-1.png)
 
 PlotBird itself is self-hosted, cookie-free web analytics in plain PHP and MySQL.
 This plugin is only the client: it sends pageviews to the installation you
