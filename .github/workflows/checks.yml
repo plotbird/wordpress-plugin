@@ -69,7 +69,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p build/plotbird-analytics
-          tar --exclude='./.git' --exclude='./build' --exclude='./.github' -cf - . \
+          tar --exclude='./.git' --exclude='./build' --exclude='./.github' --exclude='./assets' -cf - . \
             | tar -xf - -C build/plotbird-analytics
           cd build && zip -qr plotbird-analytics.zip plotbird-analytics
           ls -lh plotbird-analytics.zip
