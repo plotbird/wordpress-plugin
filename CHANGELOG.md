@@ -4,6 +4,14 @@ All notable changes to the WordPress plugin are recorded here. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the
 project uses [semantic versioning](https://semver.org/).
 
+## [1.0.2] - 2026-10-19
+
+### Changed
+
+* The description says where the tracking script comes from — the installation
+  the user names — and that the plugin is the WordPress client of the PlotBird
+  project. Both are questions the plugin directory asks before it looks at code.
+
 ## [1.0.1] - 2026-10-19
 
 ### Changed
@@ -44,5 +52,7 @@ First public release.
   forced to either from the setup screen.
 - Bird icon in the admin menu, drawn from the project's own mark.
 
+[1.0.1]: https://github.com/plotbird/wordpress-plugin/releases/tag/v1.0.1
+[1.0.2]: https://github.com/plotbird/wordpress-plugin/releases/tag/v1.0.2
 [1.0.1]: https://github.com/plotbird/wordpress-plugin/releases/tag/v1.0.1
 [1.0.0]: https://github.com/plotbird/wordpress-plugin/releases/tag/v1.0.0

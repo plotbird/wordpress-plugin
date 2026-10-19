@@ -4,7 +4,7 @@ Tags: analytics, statistics, privacy, cookieless, self-hosted
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -22,14 +22,20 @@ through it: put the PlotBird folder on your hosting, finish its browser
 installer, paste the address and the website id here, then check that visits
 arrive.
 
+This is the WordPress client of the PlotBird project
+(github.com/plotbird/analytics). The tracking script it loads is served by your
+own installation, at the address you enter on the setup screen: the plugin loads
+no code from a server of ours, and it sends nothing anywhere except the
+installation you named.
+
 What the plugin does:
 
-* Adds one script tag to the page head, about 1.3 KB, loaded asynchronously.
+* Adds one script tag to the page head, about 1.6 KB, loaded asynchronously.
 * Skips the WordPress admin, feeds, previews and JSON requests.
 * Can skip logged-in administrators, so your own visits do not land in the
   statistics.
-* Offers two read-only checks: is there a PlotBird installation at that address,
-  and did the tracking code reach your front page.
+* Offers three read-only checks: is there a PlotBird installation at that address,
+  does it accept the share link, and did the tracking code reach your front page.
 
 What the plugin does not do:
 
@@ -60,7 +66,7 @@ is usually enough: put it in a folder of its own, for example
 
 = Will this slow my site down? =
 
-The tracker is about 1.3 KB, loads asynchronously and never blocks rendering.
+The tracker is about 1.6 KB, loads asynchronously and never blocks rendering.
 
 = Does it set cookies? =
 
@@ -82,6 +88,11 @@ running, because it is a separate application.
 1. The setup screen, with the three steps and the two checks.
 
 == Changelog ==
+
+= 1.0.2 =
+* The description states where the tracking script comes from and that the
+  plugin belongs to the PlotBird project, which is what the submission form asks
+  about first.
 
 = 1.0.1 =
 * Passes Plugin Check with no errors and no warnings: the tracking script is

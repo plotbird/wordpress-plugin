@@ -8,7 +8,9 @@ no third-party service, no cookies.
 
 PlotBird itself is self-hosted, cookie-free web analytics in plain PHP and MySQL.
 This plugin is only the client: it sends pageviews to the installation you
-control and reads the numbers back through a read-only share link.
+control and reads the numbers back through a read-only share link. That
+installation is the address you enter on the setup screen, so the plugin loads
+no code from a server of ours, and sends nothing anywhere else.
 
 - **Requires:** WordPress 6.0+, PHP 7.4+
 - **Licence:** GPL-2.0-or-later
