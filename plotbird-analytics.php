@@ -3,7 +3,7 @@
  * Plugin Name:       PlotBird Analytics
  * Plugin URI:        https://github.com/plotbird/wordpress-plugin
  * Description:       Adds the PlotBird tracking code to your site. PlotBird is self-hosted, cookie-free web analytics that runs on ordinary PHP and MySQL hosting.
- * Version:           1.0.3
+ * Version:           1.0.4
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            PlotBird
@@ -18,7 +18,7 @@
 
 defined('ABSPATH') || exit;
 
-define('PLOTBIRD_ANALYTICS_VERSION', '1.0.3');
+define('PLOTBIRD_ANALYTICS_VERSION', '1.0.4');
 define('PLOTBIRD_ANALYTICS_FILE', __FILE__);
 define('PLOTBIRD_ANALYTICS_DIR', plugin_dir_path(__FILE__));
 define('PLOTBIRD_ANALYTICS_URL', plugin_dir_url(__FILE__));

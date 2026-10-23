@@ -4,6 +4,18 @@ All notable changes to the WordPress plugin are recorded here. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the
 project uses [semantic versioning](https://semver.org/).
 
+## [1.0.4] - 2026-10-23
+
+### Changed
+
+* The admin menu entry moved from position 3 to the bottom of the menu. A
+  top-level item is right for a dashboard, but it must not displace the core
+  items — which is what the plugin directory flagged.
+* The release archive no longer includes `languages/`. Translations for a plugin
+  hosted on WordPress.org are generated and distributed by
+  translate.wordpress.org; the `.po` and `.pot` files stay in this repository, so
+  the Russian translation can be imported there instead of shipped.
+
 ## [1.0.3] - 2026-10-19
 
 ### Fixed
