@@ -2,9 +2,8 @@
 /**
  * Charts drawn as SVG, without a charting library.
  *
- * The page shows a few series and a sparkline per metric. Pulling in 200 KB of
- * JavaScript for that would be out of proportion for an admin screen, and the
- * plugin has to stay simple enough to pass a plugin review.
+ * The page shows a few series and a sparkline per metric. A charting library
+ * would weigh more than the plugin itself for that little.
  *
  * @package PlotBird_Analytics
  */

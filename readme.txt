@@ -4,7 +4,7 @@ Tags: analytics, statistics, privacy, cookieless, self-hosted
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -88,6 +88,10 @@ running, because it is a separate application.
 1. The setup screen, with the three steps and the two checks.
 
 == Changelog ==
+
+= 1.0.6 =
+  * Refreshing the statistics is a nonce-protected action instead of a plain
+    link, and the setup screen is registered once, under Settings.
 
 = 1.0.5 =
   * The plugin screens follow the site language. The former language

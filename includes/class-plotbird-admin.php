@@ -34,7 +34,7 @@ final class PlotBird_Admin {
     }
 
     /**
-     * A top-level entry for the statistics, settings underneath Settings.
+     * A top-level entry for the statistics, the setup screen under Settings.
      */
     public static function menu(): void {
         add_menu_page(
@@ -44,8 +44,7 @@ final class PlotBird_Admin {
             self::STATS_SLUG,
             [self::class, 'render_stats'],
             'dashicons-chart-area',
-            // The bottom of the menu. A top-level entry suits a dashboard, but
-            // nothing WordPress itself provides may be pushed down for it.
+            // Bottom of the menu: no core entry is displaced.
             100
         );
 
@@ -58,16 +57,6 @@ final class PlotBird_Admin {
             [self::class, 'render_stats']
         );
 
-        add_submenu_page(
-            self::STATS_SLUG,
-            __('Setup', 'plotbird-analytics'),
-            __('Setup', 'plotbird-analytics'),
-            self::CAPABILITY,
-            self::SLUG,
-            [self::class, 'render']
-        );
-
-        // The same screen is reachable from Settings, where people look first.
         add_options_page(
             __('PlotBird', 'plotbird-analytics'),
             __('PlotBird', 'plotbird-analytics'),
@@ -89,7 +78,7 @@ final class PlotBird_Admin {
     }
 
     /**
-     * Styles for these pages only.
+     * Styles. The menu icon is needed everywhere; the rest only here.
      *
      * @param string $hook Current admin page.
      */
@@ -191,9 +180,10 @@ final class PlotBird_Admin {
             $preset = 'last7';
         }
 
-        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- cache flush only.
-        $force = isset($_GET['plotbird_refresh']);
-        if ($force) {
+        $force = false;
+        if (isset($_GET['plotbird_refresh'])) {
+            check_admin_referer('plotbird_refresh');
+            $force = true;
             PlotBird_Stats::flush();
         }
 

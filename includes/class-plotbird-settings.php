@@ -8,7 +8,7 @@
 defined('ABSPATH') || exit;
 
 /**
- * Reads, validates and saves the two values the plugin needs.
+ * Reads, validates and saves the stored values.
  */
 final class PlotBird_Settings {
 
@@ -25,7 +25,7 @@ final class PlotBird_Settings {
             'website_id'   => '',
             'skip_admins'  => 1,
             'share_link'   => '',
-            ];
+        ];
     }
 
     /**
@@ -165,7 +165,6 @@ final class PlotBird_Settings {
             }
         }
         $clean['share_link'] = $share;
-
 
         return $clean;
     }

@@ -141,7 +141,7 @@ $plotbird_cards = [
                 </a>
             <?php endif; ?>
 
-            <a class="button" href="<?php echo esc_url(add_query_arg(['page' => PlotBird_Admin::STATS_SLUG, 'preset' => $preset, 'plotbird_refresh' => '1'])); ?>">
+            <a class="button" href="<?php echo esc_url(wp_nonce_url(add_query_arg(['page' => PlotBird_Admin::STATS_SLUG, 'preset' => $preset, 'plotbird_refresh' => '1']), 'plotbird_refresh')); ?>">
                 <?php esc_html_e('Refresh', 'plotbird-analytics'); ?>
             </a>
             <a class="button" href="<?php echo esc_url(admin_url('options-general.php?page=' . PlotBird_Admin::SLUG)); ?>">

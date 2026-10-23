@@ -4,6 +4,17 @@ All notable changes to the WordPress plugin are recorded here. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the
 project uses [semantic versioning](https://semver.org/).
 
+## [1.0.6] - 2026-10-23
+
+### Changed
+
+* Refreshing the statistics is a nonce-protected action rather than a plain GET
+  link, and the setup screen is registered once, under Settings, instead of twice.
+* Comments that described the review rather than the code are gone, along with
+  two smaller inconsistencies in the settings class and the chart header.
+* The release archive no longer carries `README.md` and `CHANGELOG.md`: the
+  directory reads `readme.txt`, and the rest is repository documentation.
+
 ## [1.0.5] - 2026-10-23
 
 ### Removed

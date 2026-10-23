@@ -171,23 +171,13 @@ final class PlotBird_Stats {
     }
 
     /**
-     * The locale the screens are rendered in.
-     *
-     * The screens follow the site language, so the numbers follow it too:
-     * "50,0%" next to English labels reads like a bug.
-     */
-    private static function render_locale(): string {
-        return (string) get_locale();
-    }
-
-    /**
      * Number formatting that follows the language of the screens.
      *
      * @param mixed $value Raw value.
      * @param int   $decimals Digits after the decimal separator.
      */
     public static function number($value, int $decimals = 0): string {
-        $locale = self::render_locale();
+        $locale = (string) get_locale();
 
         if (strpos($locale, 'ru') === 0) {
             return number_format((float) $value, $decimals, ',', ' ');

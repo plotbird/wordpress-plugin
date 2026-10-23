@@ -52,11 +52,7 @@ $plotbird_steps = [
             <li class="<?php echo $plotbird_step['done'] ? 'is-done' : 'is-pending'; ?>">
                 <span class="plotbird-step-mark" aria-hidden="true"><?php echo esc_html($plotbird_step['done'] ? '✓' : (string) ($plotbird_index + 1)); ?></span>
                 <span class="screen-reader-text">
-                    <?php
-                    echo $plotbird_step['done']
-                        ? esc_html__('Done:', 'plotbird-analytics')
-                        : esc_html__('To do:', 'plotbird-analytics');
-                    ?>
+                    <?php echo esc_html($plotbird_step['done'] ? __('Done:', 'plotbird-analytics') : __('To do:', 'plotbird-analytics')); ?>
                 </span>
                 <?php echo esc_html($plotbird_step['title']); ?>
             </li>
@@ -144,7 +140,6 @@ $plotbird_steps = [
         <p class="description">
             <?php esc_html_e('This link is the key to your numbers. If you revoke it in PlotBird, this page stops showing statistics until you add a new one.', 'plotbird-analytics'); ?>
         </p>
-
 
         <?php submit_button($plotbird_ready ? __('Save changes', 'plotbird-analytics') : __('Save and continue', 'plotbird-analytics')); ?>
     </form>
