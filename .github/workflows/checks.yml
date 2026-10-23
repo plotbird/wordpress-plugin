@@ -94,11 +94,21 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p build/plotbird-analytics
-          tar --exclude='./.git' --exclude='./build' --exclude='./.github' --exclude='./assets' -cf - . \
+          tar --exclude='./.git' --exclude='./build' --exclude='./.github' --exclude='./assets' \
+              --exclude='./languages' --exclude='./.gitattributes' --exclude='./.gitignore' -cf - . \
             | tar -xf - -C build/plotbird-analytics
           cd build && zip -qr plotbird-analytics.zip plotbird-analytics
           ls -lh plotbird-analytics.zip
 
+
+      - name: No translation files in the archive
+        run: |
+          set -euo pipefail
+          if unzip -l build/plotbird-analytics.zip | grep -E '\.(po|mo|pot)$|/languages/'; then
+            echo "::error::the archive carries translation files; translate.wordpress.org generates them"
+            exit 1
+          fi
+          echo "no translation files"
       - uses: actions/upload-artifact@v7
         with:
           name: plotbird-analytics
