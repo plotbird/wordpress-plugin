@@ -14,7 +14,7 @@ no code from a server of ours, and sends nothing anywhere else.
 
 - **Requires:** WordPress 6.0+, PHP 7.4+
 - **Licence:** GPL-2.0-or-later
-- **Languages:** English, Русский (follows the site language, can be overridden)
+- **Languages:** the screens follow the site language; translations are handled by translate.wordpress.org
 
 ## What it does
 
@@ -90,8 +90,10 @@ The plugin itself sends nothing anywhere except your own PlotBird installation.
 php -l plotbird-analytics.php     # syntax check
 ```
 
-Translation files live in `languages/`. The source strings are English; the
-Russian catalogue is `plotbird-analytics-ru_RU.po` with the compiled `.mo`.
+The `.po` and `.pot` sources live in `languages/`, but they are not part of the
+release archive: WordPress.org generates and distributes translations for hosted
+plugins. The Russian catalogue is imported into translate.wordpress.org after
+approval.
 
 ## Licence
 

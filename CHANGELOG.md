@@ -4,6 +4,16 @@ All notable changes to the WordPress plugin are recorded here. The format
 follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the
 project uses [semantic versioning](https://semver.org/).
 
+## [1.0.5] - 2026-10-23
+
+### Removed
+
+* The `Domain Path` header and the language selector. Plugin Check reports
+  `plugin_header_nonexistent_domain_path` while the header points at `languages/`,
+  and after 1.0.4 dropped that folder there was nothing left to point at. The
+  screens follow the site language, which is what WordPress expects; number
+  formatting follows the same locale.
+
 ## [1.0.4] - 2026-10-23
 
 ### Changed

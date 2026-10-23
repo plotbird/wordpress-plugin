@@ -4,7 +4,7 @@ Tags: analytics, statistics, privacy, cookieless, self-hosted
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -88,6 +88,11 @@ running, because it is a separate application.
 1. The setup screen, with the three steps and the two checks.
 
 == Changelog ==
+
+= 1.0.5 =
+  * The plugin screens follow the site language. The former language
+    selector is gone: translations are provided by translate.wordpress.org,
+    and the separate selector no longer had anything to switch.
 
 = 1.0.4 =
   * The admin menu entry sits at the bottom of the menu instead of above the

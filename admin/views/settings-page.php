@@ -145,20 +145,6 @@ $plotbird_steps = [
             <?php esc_html_e('This link is the key to your numbers. If you revoke it in PlotBird, this page stops showing statistics until you add a new one.', 'plotbird-analytics'); ?>
         </p>
 
-        <h2><?php esc_html_e('Language', 'plotbird-analytics'); ?></h2>
-        <p>
-            <label for="plotbird-language"><?php esc_html_e('Language of these screens', 'plotbird-analytics'); ?></label><br>
-            <select id="plotbird-language" name="<?php echo esc_attr(PlotBird_Settings::OPTION); ?>[language]">
-                <?php foreach (PlotBird_Settings::languages() as $plotbird_code => $plotbird_label) : ?>
-                    <option value="<?php echo esc_attr($plotbird_code); ?>" <?php selected($plotbird_code, (string) $settings['language']); ?>>
-                        <?php echo esc_html(PlotBird_Settings::language_label($plotbird_code)); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-        </p>
-        <p class="description">
-            <?php esc_html_e('"Site language" follows the language of WordPress, so usually there is nothing to choose here. Pick one only if these screens should be in another language than the rest of the admin.', 'plotbird-analytics'); ?>
-        </p>
 
         <?php submit_button($plotbird_ready ? __('Save changes', 'plotbird-analytics') : __('Save and continue', 'plotbird-analytics')); ?>
     </form>

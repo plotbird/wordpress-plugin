@@ -25,41 +25,7 @@ final class PlotBird_Settings {
             'website_id'   => '',
             'skip_admins'  => 1,
             'share_link'   => '',
-            'language'     => 'site',
-        ];
-    }
-
-    /**
-     * Languages the plugin ships translations for.
-     *
-     * "site" follows whatever language WordPress itself is set to, which is
-     * what almost everybody wants: no second setting to keep in step.
-     *
-     * The labels are deliberately untranslated. This list is read by the
-     * plugin_locale filter, and calling __() there would load the text domain
-     * with the old locale before the filter could return the new one.
-     *
-     * @return array<string,string>
-     */
-    public static function languages(): array {
-        return [
-            'site'  => '',
-            'en_US' => 'English',
-            'ru_RU' => 'Русский',
-        ];
-    }
-
-    /**
-     * The label to show for a language code.
-     *
-     * @param string $code One of the keys of languages().
-     */
-    public static function language_label(string $code): string {
-        if ($code === 'site') {
-            return __('Site language', 'plotbird-analytics');
-        }
-
-        return self::languages()[$code] ?? $code;
+            ];
     }
 
     /**
@@ -200,8 +166,6 @@ final class PlotBird_Settings {
         }
         $clean['share_link'] = $share;
 
-        $language = isset($input['language']) ? (string) $input['language'] : 'site';
-        $clean['language'] = array_key_exists($language, self::languages()) ? $language : 'site';
 
         return $clean;
     }

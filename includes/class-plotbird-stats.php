@@ -173,14 +173,11 @@ final class PlotBird_Stats {
     /**
      * The locale the screens are rendered in.
      *
-     * It is the site's language unless one was chosen on the setup screen, in
-     * which case the numbers have to follow the text: "50,0%" next to English
-     * labels reads like a bug.
+     * The screens follow the site language, so the numbers follow it too:
+     * "50,0%" next to English labels reads like a bug.
      */
     private static function render_locale(): string {
-        $chosen = (string) PlotBird_Settings::get('language');
-
-        return $chosen !== '' && $chosen !== 'site' ? $chosen : get_locale();
+        return (string) get_locale();
     }
 
     /**
