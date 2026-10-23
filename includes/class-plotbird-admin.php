@@ -44,7 +44,9 @@ final class PlotBird_Admin {
             self::STATS_SLUG,
             [self::class, 'render_stats'],
             'dashicons-chart-area',
-            3
+            // The bottom of the menu. A top-level entry suits a dashboard, but
+            // nothing WordPress itself provides may be pushed down for it.
+            100
         );
 
         add_submenu_page(
